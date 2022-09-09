@@ -1,0 +1,25 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name:  cloud-config-center #注册进Eureka服务器的微服务名
+  cloud:
+    config:
+      server:
+        git:
+          # 新建的github分支已经默认为main，所以此处需指定 spring.cloud.config.server.git.default-label=main
+          uri: git@github.com:jiangxingyou/springcloud-config.git #GitHub上面的git仓库名字
+          ####搜索目录
+          search-paths:
+            - springcloud-config
+#          default-label: main
+      ####读取分支
+      label: main
+
+#服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+

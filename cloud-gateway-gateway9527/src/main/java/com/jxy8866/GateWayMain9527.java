@@ -5,13 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-/**
- * 启动注解里面有个compoentScan，@component要放在启动类同级或下级
- */
 @EnableEurekaClient
-//@RibbonClient(value = "CLOUD-PAYMENT-SERVICE", configuration = MySelfRule.class)
-public class OrderMain80 {
+public class GateWayMain9527 {
     public static void main(String[] args) {
-        SpringApplication.run(OrderMain80.class, args);
+        SpringApplication.run(GateWayMain9527.class, args);
+        System.out.println("Hello world!");
     }
 }

@@ -17,6 +17,7 @@ spring:
       ####读取分支
       label: main
 
+
 #服务注册到eureka地址
 eureka:
   client:
